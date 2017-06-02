@@ -1,13 +1,19 @@
 const request = require('request')
 const express = require('express')
+const bodyParser = require('body-parser')
 
 const app = express()
+app.use(bodyParser.json())
 
 const API_KEY = process.env.RAZOR_API_KEY;
 const config = {
   mode: 'cleanHTML',
   extractors: 'topics'
 }
+
+app.post('/', (req, res) => {
+  res.send(req.body.challenge)
+})
 
 app.get('/interpet', (req, res) => {
   request.post({
@@ -22,7 +28,7 @@ app.get('/interpet', (req, res) => {
     }
   }, (err, response, body) => {
     const json = JSON.parse(body);
-    console.log(json.response.topics.slice(0, 3))
+    res.send(json.response.topics.slice(0, 3))
   })
 })
 
