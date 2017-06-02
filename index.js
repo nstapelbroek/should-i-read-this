@@ -11,6 +11,10 @@ const config = {
   extractors: 'topics'
 }
 
+app.get('/', (req, res) => {
+  res.send('Hello world!')
+})
+
 app.post('/', (req, res) => {
   res.send(req.body.challenge)
 })
