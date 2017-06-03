@@ -13,6 +13,5 @@ tests/
 docker-compose.yml
 Dockerfile
 Makefile
-package.json
 readme.md
 webpack.mix.js
