@@ -1,6 +1,6 @@
-# Should i read this
+# Should I read this
 Ever wanted to know the topics of an article that has a clickbait title? Ever wondered if those links in a slack channel are meant specifically for you?
-Should i read this is a small service that analyzes links and returns topics using the [TextRazor API](https://www.textrazor.com/). 
+Should I read this is a small service that analyzes links and returns topics using the [TextRazor API](https://www.textrazor.com/). 
 
 ## getting started
 We assume you have:
