@@ -1,6 +1,7 @@
 const request = require('request')
 const express = require('express')
 const bodyParser = require('body-parser')
+const signalHandler = require('./src/helpers/signalHandler')()
 
 const app = express()
 app.use(bodyParser.json())
