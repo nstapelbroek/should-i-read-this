@@ -11,7 +11,7 @@ We assume you have:
 Once you have these requirements in place, follow these steps to get the environment working:
 1. insert your TextRazor API key in the docker-compse.yml file as a envinroment variable for the application
 2. run `docker-compse up`
-3. navigate to http://localhost:8888 to view the ngrok status, use the given on this page URL develop your application
+3. navigate to http://localhost:8888 to view the ngrok status, use the given *.ngrok.io URL on this page to develop your application
 4. configure this ngrok url as your Slack APP url at https://api.slack.com/apps
 5. Make sure your configure your "Event Subscriptions" in the Slack applicaiton. Currently, the should I read this application requires at least [link_shared](https://api.slack.com/events/link_shared) and [message.channels](https://api.slack.com/events/message.channels)
 
