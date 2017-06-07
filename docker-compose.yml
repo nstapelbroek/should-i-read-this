@@ -6,8 +6,8 @@ services:
           dockerfile: ./Dockerfile
           context: .
       command: yarn watch
-      environment:
-          RAZOR_API_KEY: pleasechangeme
+      env_file:
+        - .env
       ports:
           - 8080:3000
       volumes:
