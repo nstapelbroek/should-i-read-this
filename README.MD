@@ -13,7 +13,7 @@ Once you have these requirements in place, follow these steps to get the environ
 2. run `docker-compse up`
 3. navigate to http://localhost:8888 to view the ngrok status, use the given *.ngrok.io URL on this page to develop your application
 4. configure this ngrok url as your Slack APP url at https://api.slack.com/apps
-5. Make sure your configure your "Event Subscriptions" in the Slack applicaiton. Currently, the should I read this application requires at least [link_shared](https://api.slack.com/events/link_shared) and [message.channels](https://api.slack.com/events/message.channels)
+5. Make sure your configure your "Event Subscriptions" in the Slack application. Currently, the should I read this application requires at least [link_shared](https://api.slack.com/events/link_shared) and [message.channels](https://api.slack.com/events/message.channels)
 
 
 ## Deployment
@@ -27,4 +27,4 @@ You can use the `make build` to create an image and push it to docker hub. Use a
 ```
 make build REGISTRYNAME=myawesomeregistry.com/username/should-i-read-this
 ```
-Lateron, you can pull the image from your custom registry and host it just like the "Deployment" describes.
+Later on, you can pull the image from your custom registry and host it just like the "Deployment" describes.
