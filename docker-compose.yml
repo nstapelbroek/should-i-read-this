@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+    application:
+      build:
+          dockerfile: ./Dockerfile
+          context: .
+      command: yarn watch
+      env_file:
+        - .env
+      ports:
+          - 8080:3000
+      volumes:
+          - .:/app
+
+    ngrok:
+      command: ngrok http application:3000 -log stdout
+      image: wernight/ngrok   
+      links:
+        - application
+      ports:
+        - 8888:4040
+
+networks:
+    default:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+            - subnet: 192.168.90.0/24
+              gateway: 192.168.90.1
