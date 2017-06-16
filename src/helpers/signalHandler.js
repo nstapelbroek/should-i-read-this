@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * To prevent issues with cntrl + c in a container we hook into signal handeling to cleanly exit the container or environment 
  * if our app is asked to.
